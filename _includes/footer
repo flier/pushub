@@ -1,0 +1,40 @@
+<footer>
+  <div id="container clearfix">
+    <dl class="footer_nav">
+      <dt>Pushub</dt>
+      <dd><a href="about.html">About us</a></dd>
+      <dd><a href="#">Blog</a></dd>
+      <dd><a href="#">Contact &amp; Support </a></dd>
+      <dd><a href="#">Service status</a></dd>
+    </dl>
+    <dl class="footer_nav">
+      <dt>Platforms</dt>
+      <dd><a href="#">iOS</a></dd>
+      <dd><a href="#">Android</a></dd>
+      <dd><a href="#">Windows Phone</a></dd>
+      <dd><a href="#">HTML/AJAX</a></dd>
+    </dl>
+    <dl class="footer_nav">
+      <dt>Documents</dt>
+      <dd><a href="#">Pusub Help</a></dd>
+      <dd><a href="#">Developer API</a></dd>
+      <dd><a href="faq.html">FAQ</a></dd>
+    </dl>
+    <dl class="footer_nav">
+      <dt>More</dt>
+      <dd><a href="#">Story</a></dd>
+      <dd><a href="#">Who are using</a></dd>
+      <dd><a href="#">Plans &amp; Pricing</a></dd>
+      <dd><a href="#">Join Us</a></dd>
+    </dl>
+    <hr class="footer-divider">
+
+    <p class="footer-right">&copy; 2012 {{ site.author.name }} All rights reserved.</p>
+    <p class="footer-left"></p>
+    <ul class="inline">
+      <li><a href="#">Terms of Services</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Security</a></li>
+    </ul>
+  </div>        
+</footer>
