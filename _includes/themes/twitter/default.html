@@ -39,13 +39,13 @@
             </a>
             <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
             <div class="nav-collapse collapse">
-              <p class="navbar-text pull-right">
-                <a href="#" class="navbar-link">Login</a>
-              </p>
               <ul class="nav">
                 {% assign pages_list = site.pages %}
                 {% assign group = 'navigation' %}
                 {% include JB/pages_list %}
+              </ul>
+              <ul class="nav pull-right">
+                <li><a href="#" class="navbar-link">Login</a></li>
               </ul>
             </div>
           </div>
@@ -53,7 +53,7 @@
       </div>
     </div>
 
-    {% if page.carousel == true %}
+    {% if page.carousel != null %}
     {% include carousel %}
     {% endif %}
 
@@ -69,6 +69,16 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
+
+    {% if page.carousel != null %}
+    <script>
+      !function ($) {
+        $(function(){
+          $('#{{ page.carousel.id }}').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    {% endif %}
 
     {% include JB/analytics %}
   </body>

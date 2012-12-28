@@ -2,7 +2,31 @@
 layout: page
 title: Hello World!
 tagline: Supporting tagline
-carousel: true
+carousel:
+  id: myCarousel
+  items:
+    - 
+      title: Example headline.
+      desc: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+      img: slide-01.jpg
+      action:
+        name: Sign up today
+        url: #
+    - 
+      title: Another example headline.
+      desc: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+      img: slide-02.jpg
+      action: 
+        name: Learn more
+        url: #
+    - 
+      title: One more for good measure.
+      desc: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+      img: slide-03.jpg
+      action: 
+        name: Browse gallery
+        url: #
+
 ---
 {% include JB/setup %}
 
@@ -124,11 +148,3 @@ Here's a sample "posts list".
 
 This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
 We need to clean up the themes, make theme usage guides with theme-specific markup examples.
-
-<script>
-  !function ($) {
-    $(function(){
-      $('#myCarousel').carousel()
-    })
-  }(window.jQuery)
-</script>
