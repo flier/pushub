@@ -1,31 +1,31 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: Pushub.io
+tagline: Connect and Learn your users, communicate with realtime Medias
 carousel:
   id: myCarousel
   items:
     - 
-      title: Example headline.
-      desc: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+      title: Connect 
+      desc: Push message to the right customers and receive feedback from them, whether your mobile apps is running or offline, connect them over all the platforms (iOS, Android, Window Phone 7/8 and HTML/AJAX).
       img: slide-01.jpg
       action:
-        name: Sign up today
-        url: #
+        name: Learn more
+        url: features/connect.html
     - 
-      title: Another example headline.
-      desc: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+      title: Learn 
+      desc: Know your users when, where and how to use your mobile apps, learn their use behaviors, and read realtime and analystic reports to identify your next customer and income.
       img: slide-02.jpg
       action: 
         name: Learn more
-        url: #
+        url: features/learn.html
     - 
-      title: One more for good measure.
-      desc: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+      title: Media 
+      desc: Push and receive the realtime voice, video, photos and files from and to the users, redirect to your online customer services, or store in the cloud or your media servers.
       img: slide-03.jpg
       action: 
-        name: Browse gallery
-        url: #
+        name: Learn more
+        url: features/medias.html
 
 ---
 {% include JB/setup %}
@@ -112,25 +112,11 @@ carousel:
 </style>
 
 <div class="row">
+  {% for item in page.carousel.items %}
   <div class="span4">
-    <h2>Connect</h2>
-    <p>
-      Push message to the right customers and receive feedback from them, whether your mobile apps is running or offline, connect them over all the platforms (iOs, Android, Window Phone and HTML/AJAX).
-    </p>
-    <p><a class="btn" href="#">View Details</a></p>
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.desc }}</p>
+    <p><a class="btn" href="{{ item.action.url }}">{{ item.action.name }}</a></p>
   </div>
-  <div class="span4">
-    <h2>Learn</h2>
-    <p>
-      Know your users when, where and how to use your mobile apps, learn their use behaviors, and read realtime and analystic reports to identify your next customer and income.
-    </p>
-    <p><a class="btn" href="#">View Details</a></p>
-  </div>
-  <div class="span4">
-    <h2>Media</h2>
-    <p>
-      Push and receive the realtime voice, video, photos and files from and to the users, redirect to your online customer services, or store in the cloud or your media servers.
-    </p>
-    <p><a class="btn" href="#">View Details</a></p>
-  </div>
+  {% endfor %}
 </div>
