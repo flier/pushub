@@ -24,10 +24,94 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+
+    <style>
+
+      /* GLOBAL STYLES
+      -------------------------------------------------- */
+      /* Padding below the footer and lighter body text */
+
+      body {
+        padding-bottom: 40px;
+        color: #5a5a5a;
+      }
+
+
+
+      /* CUSTOMIZE THE NAVBAR
+      -------------------------------------------------- */
+
+      /* Special class on .container surrounding .navbar, used for positioning it into place. */
+      .navbar-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        margin-top: 20px;
+        margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+      }
+      .navbar-wrapper .navbar {
+
+      }
+
+      /* Remove border and change up box shadow for more contrast */
+      .navbar .navbar-inner {
+        border: 0;
+        -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+           -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+                box-shadow: 0 2px 10px rgba(0,0,0,.25);
+      }
+
+      /* Downsize the brand/project name a bit */
+      .navbar .brand {
+        padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+        font-size: 16px;
+        font-weight: bold;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+      }
+
+      /* Navbar links: increase padding for taller navbar */
+      .navbar .nav > li > a {
+        padding: 15px 20px;
+      }
+
+      .navbar .navbar-search {
+        padding: 5px 20px;
+      }
+
+      /* Offset the responsive button for proper vertical alignment */
+      .navbar .btn-navbar {
+        margin-top: 10px;
+      }
+
+
+      /* RESPONSIVE CSS
+      -------------------------------------------------- */
+
+      @media (max-width: 979px) {
+
+        .container.navbar-wrapper {
+          margin-bottom: 0;
+          width: auto;
+        }
+        .navbar-inner {
+          border-radius: 0;
+          margin: -20px 0;
+        }
+      }
+
+
+      @media (max-width: 767px) {
+
+        .navbar-inner {
+          margin: -20px;
+        }
+      }
+    </style>
   </head>
 
   <body>
-
     <div class="navbar-wrapper">
       <div class="container">
         <div class="navbar navbar-inverse">
@@ -45,8 +129,12 @@
                 {% include JB/pages_list %}
               </ul>
               <ul class="nav pull-right">
+                <li><a href="#" class="navbar-link">Sign Up</a></li>
                 <li><a href="#" class="navbar-link">Login</a></li>
               </ul>
+              <form class="navbar-search pull-right" action="">
+                <input type="text" class="search-query span2" placeholder="Search">
+              </form>
             </div>
           </div>
         </div>
